@@ -109,11 +109,14 @@ tout ça pour un seul model!!!!
 
 dans le cas vous avez fait une modification au niveau de fichier fast api vous avez besoin de execute les cmd suivant :
 docker build -t wassimrebahi/liver-model:v3 .
+
 docker push wassimrebahi/liver-model:v3
 
 change l'image dans le fichier liver-deployement.yml:
+
 image: wassimrebahi/liver-model:v3
 
 
 kubectl apply -f liver-deployment.yaml
+
 kubectl rollout status deployment/liver-model
