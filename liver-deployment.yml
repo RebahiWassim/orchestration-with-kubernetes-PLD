@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liver-model
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: liver-model
+  template:
+    metadata:
+      labels:
+        app: liver-model
+    spec:
+      containers:
+        - name: liver-model
+          image: wassimrebahi/liver-model:v4
+          ports:
+            - containerPort: 8000

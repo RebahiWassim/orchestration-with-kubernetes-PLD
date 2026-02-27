@@ -32,7 +32,7 @@ docker push wassimrebahi/bone-model:v1
 
 C:\Windows\system32>nano liver-deployment.yaml
 
-le contenu comme ça : 
+le contenu comme ça (voir le fichier liver-deployment.yml) : 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -59,7 +59,7 @@ C:\Windows\system32>kubectl apply -f liver-deployment.yaml
 12-verification : kubectl get pods ( status should be running it takes a time few minutes)
 
 13- la creation du fichier service : C:\Windows\system32>nano liver-service.yaml
-contenu:
+contenu (voir le fihcier liver-service.yml):
 apiVersion: v1
 kind: Service
 metadata:
